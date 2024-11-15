@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로컬에 있는 json파일 불러오기</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>로컬에 있는 json파일 불러오기</h1>
+
+  
+  <script src="/test.json" type="text/javascript"></script>
+    
+    <script>
+      /*
+      JSON.stringify() : JavaScript Object를 JSON 문자열로 변환
+      JSON.parse() : JSON 문자열를 JavaScript Object로 변환
+      */
+        let testData = JSON.parse(JSON.stringify(TestFile));
+          console.log(testData.test);
+          let personsAll = testData.persons;
+          console.log(personsAll);
+          for (let i = 0; i < personsAll.length; i++) {
+            console.log(personsAll[i]);
+            console.log(personsAll[i].name);
+          }
+    </script>
+</body>
+</html>
